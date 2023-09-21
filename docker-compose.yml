@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ros_app:
+    build: Docker/
+    image: ros_foxy_image
+    container_name: ros_app
+    user: ros_foxy
+    network_mode: host
+    ipc: host
+    volumes:
+      - ./App:/App
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY
+    stdin_open: true
+    tty: true
