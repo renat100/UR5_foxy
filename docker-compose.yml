@@ -8,11 +8,13 @@ services:
     user: ros_foxy
     network_mode: host
     ipc: host
-    volumes:
-      - ./App:/App
-      - /tmp/.X11-unix:/tmp/.X11-unix:rw
     environment:
       - DISPLAY
       - QT_X11_NO_MITSHM=1
+    devices:
+      - /dev/dri/card0:/dev/dri/card0
+    volumes:
+      - ./App:/App
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
     stdin_open: true
     tty: true
