@@ -33,5 +33,5 @@ ros2 launch ur_bringup ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102
 
 # Esegue traiettoria pianificata da Moveit (servono entrambi su terminali diversi)
 ros2 launch ur_bringup ur_control.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=false
-ros2 launch ur_bringup ur_moveit.launch.py ur_type:=ur5 robot_ip:="192.168.1.102 launch_rviz:=true 
+ros2 launch ur_bringup ur_moveit.launch.py ur_type:=ur5 robot_ip:=192.168.1.102 launch_rviz:=true 
 # add use_fake_hardware:=true per escludere robot reale
