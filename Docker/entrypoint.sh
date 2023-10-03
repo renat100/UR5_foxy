@@ -2,13 +2,19 @@
 
 #NB: eseguito ogni volta che il container va in run (c'è già il filesystem col bind di App qui)
 
+# X debug
+pwd > /tmp/cancellare.txt
+ls > /tmp/cancellare.txt
+
 set -e
 
-source /opt/ros/foxy/setup.bash
+#Build del progetto ROS
+colcon build
 
 echo "Provided arguments: $@"
 
-xhost local:root
+#xhost local:root
 
 
 exec $@
+

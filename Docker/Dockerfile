@@ -22,6 +22,8 @@ RUN apt update && sudo apt upgrade; \
   apt install iputils-ping \
   && rm -rf /var/lib/apt/lists/*
 
+RUN pwd > /tmp/cancellare1.txt
+RUN ls > /tmp/cancellare1.txt
 
 #Installare le dipendenze necessarie x compilare UR_driver
 RUN mkdir -p /Src_for_dep_driver/src/

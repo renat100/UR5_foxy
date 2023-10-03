@@ -3,6 +3,10 @@
 
 docker compose up
 
+# Per forzare la build senza cache
+docker compose build --no-cache
+
+
 # Per visualizzare tutti i container istanziati in ogni stato (attivo/sospeso)
 docker ps -a
 
