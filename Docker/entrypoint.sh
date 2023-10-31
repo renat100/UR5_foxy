@@ -9,7 +9,7 @@ ls > /tmp/cancellare.txt
 set -e
 
 #Build del progetto ROS
-colcon build
+#colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 echo "Provided arguments: $@"
 
